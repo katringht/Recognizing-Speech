@@ -14,11 +14,12 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet var playButton: UIButton!
     @IBOutlet var pauseButton: UIButton!
     @IBOutlet var backgroundView: UIView!
+    @IBOutlet var englishLanguegeButton: UIButton!
+    @IBOutlet var russianLanguegeButton: UIButton!
     
-    var speechList: [String] = []
     var mySpeechR: [SpeachRecog] = []
     let audioEngine = AVAudioEngine()
-    let speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
+    var speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
     let request = SFSpeechAudioBufferRecognitionRequest()
     var task: SFSpeechRecognitionTask!
     var isStart = false
@@ -35,6 +36,10 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         mySpeechR = DataManager.shared.fetchData()
         tableView.reloadData()
         requestPermission()
+        
+        englishLanguegeButton.isSelectedButton()
+        russianLanguegeButton.isDeselectedButton()
+        speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en_US"))
     }
     
 // MARK: Checking request
@@ -77,7 +82,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         startAudioEngine()
         
         guard let myRecognization = SFSpeechRecognizer() else {
-            print("Recognizationis not allow on your loval")
+            print("Recognizationis not allow on your leval")
             return
         }
         if !myRecognization.isAvailable{
@@ -95,7 +100,13 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             }
             let message = response.bestTranscription.formattedString
             self.textSpeech.text = message
-            self.speechList.append("\(message)")
+            
+            if response.isFinal{
+                let sp = DataManager.shared.mySpeeches(text: response.bestTranscription.formattedString)
+                self.mySpeechR.append(sp)
+                self.tableView.reloadData()
+                DataManager.shared.saveContext()
+            }
         })
     }
     
@@ -121,12 +132,6 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             playButton.backgroundColor = .white
             playButton.tintColor = .systemIndigo
             pauseButton.isHidden = true
-            
-            let sp = DataManager.shared.mySpeeches(text: "\(speechList.suffix(1))")
-            print("\(speechList.suffix(1))")
-            mySpeechR.append(sp)
-            self.tableView.reloadData()
-            DataManager.shared.saveContext()
         }
     }
     
@@ -140,5 +145,15 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             audioEngine.prepare()
             startAudioEngine()
         }
+    }
+    @IBAction func isEnglishLang(_ sender: Any) {
+        englishLanguegeButton.isSelectedButton()
+        russianLanguegeButton.isDeselectedButton()
+        speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en_US"))
+    }
+    @IBAction func isRussianLang(_ sender: Any) {
+        englishLanguegeButton.isDeselectedButton()
+        russianLanguegeButton.isSelectedButton()
+        speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "ru_RU"))
     }
 }

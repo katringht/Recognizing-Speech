@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "flag-ssha-1848–1851-1024x539.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "flag-ssha-1848–1851-1024x539-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "flag-ssha-1848–1851-1024x539-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
