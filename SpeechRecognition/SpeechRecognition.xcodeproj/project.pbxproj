@@ -16,9 +16,9 @@
 		21B02FFD26C65042007D145F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21B02FFB26C65042007D145F /* LaunchScreen.storyboard */; };
 		21B0300926C65082007D145F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0300826C65082007D145F /* TableViewCell.swift */; };
 		21B0300C26C65FE1007D145F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0300B26C65FE1007D145F /* DataManager.swift */; };
-		21B0301226C67331007D145F /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0301126C67331007D145F /* ViewControllerExtention.swift */; };
-		21B0301426C6765D007D145F /* ColorExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0301326C6765D007D145F /* ColorExtention.swift */; };
-		21F4AA2626C69D3300CC11F0 /* ButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4AA2526C69D3300CC11F0 /* ButtonExtention.swift */; };
+		21B0301226C67331007D145F /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0301126C67331007D145F /* ViewControllerExtension.swift */; };
+		21B0301426C6765D007D145F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B0301326C6765D007D145F /* ColorExtension.swift */; };
+		21F4AA2626C69D3300CC11F0 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4AA2526C69D3300CC11F0 /* ButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 		21B02FFE26C65042007D145F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21B0300826C65082007D145F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		21B0300B26C65FE1007D145F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		21B0301126C67331007D145F /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
-		21B0301326C6765D007D145F /* ColorExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtention.swift; sourceTree = "<group>"; };
-		21F4AA2526C69D3300CC11F0 /* ButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtention.swift; sourceTree = "<group>"; };
+		21B0301126C67331007D145F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		21B0301326C6765D007D145F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		21F4AA2526C69D3300CC11F0 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 		21B02FEC26C65042007D145F /* SpeechRecognition */ = {
 			isa = PBXGroup;
 			children = (
-				21B0301026C6731A007D145F /* Extentions */,
+				21B0301026C6731A007D145F /* Extensions */,
 				21B0300A26C65FC7007D145F /* Data */,
 				21B0300726C65077007D145F /* View */,
 				21B0300626C65071007D145F /* Controller */,
@@ -115,14 +115,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		21B0301026C6731A007D145F /* Extentions */ = {
+		21B0301026C6731A007D145F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				21B0301126C67331007D145F /* ViewControllerExtention.swift */,
-				21B0301326C6765D007D145F /* ColorExtention.swift */,
-				21F4AA2526C69D3300CC11F0 /* ButtonExtention.swift */,
+				21B0301126C67331007D145F /* ViewControllerExtension.swift */,
+				21B0301326C6765D007D145F /* ColorExtension.swift */,
+				21F4AA2526C69D3300CC11F0 /* ButtonExtension.swift */,
 			);
-			path = Extentions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +199,9 @@
 				21B0300C26C65FE1007D145F /* DataManager.swift in Sources */,
 				21B02FF226C65042007D145F /* ViewController.swift in Sources */,
 				21B02FEE26C65042007D145F /* AppDelegate.swift in Sources */,
-				21B0301426C6765D007D145F /* ColorExtention.swift in Sources */,
-				21F4AA2626C69D3300CC11F0 /* ButtonExtention.swift in Sources */,
-				21B0301226C67331007D145F /* ViewControllerExtention.swift in Sources */,
+				21B0301426C6765D007D145F /* ColorExtension.swift in Sources */,
+				21F4AA2626C69D3300CC11F0 /* ButtonExtension.swift in Sources */,
+				21B0301226C67331007D145F /* ViewControllerExtension.swift in Sources */,
 				21B02FF026C65042007D145F /* SceneDelegate.swift in Sources */,
 				21B02FF826C65042007D145F /* SpeechRecognition.xcdatamodeld in Sources */,
 			);
