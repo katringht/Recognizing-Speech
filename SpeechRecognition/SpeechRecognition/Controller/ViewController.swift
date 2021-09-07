@@ -20,7 +20,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
     var mySpeechR: [SpeachRecog] = []
     let audioEngine = AVAudioEngine()
     var speechRecognizer: SFSpeechRecognizer? = SFSpeechRecognizer()
-    let request = SFSpeechAudioBufferRecognitionRequest()
+    var request = SFSpeechAudioBufferRecognitionRequest()
     var task: SFSpeechRecognitionTask!
     var isStart = false
     var isPaused = false
@@ -72,6 +72,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         }
 
     func startSpeechRecognization(){
+        request = SFSpeechAudioBufferRecognitionRequest()
         let node = audioEngine.inputNode
         let recordingFormat = node.outputFormat(forBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
